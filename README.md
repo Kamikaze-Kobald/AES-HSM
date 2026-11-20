@@ -36,20 +36,3 @@ AddRoundKey
 SubBytes
 ShiftRows
 MixColumns
-
-Which ones can be combinational?
-Matrix ops in Verilog? Uh-oh...
-
-
-aes128_accelerator
-- aes_top.v
-- aes_controller.v
-- aes_round.v
-- aes_subbytes.v
-- aes_shiftrows.v
-- aes_mixcolumns.v
-- aes_addroundkey.v
-- aes_key_expansion.v
-- aes_sbox.v
-
-
