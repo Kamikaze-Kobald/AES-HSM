@@ -1,0 +1,113 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Thu Nov 19 12:11:45 2026
+# Process ID         : 134977
+# Current directory  : /home/kamikazekobold/Desktop/zacha/aes
+# Command line       : vivado
+# Log file           : /home/kamikazekobold/Desktop/zacha/aes/vivado.log
+# Journal file       : /home/kamikazekobold/Desktop/zacha/aes/vivado.jou
+# Running On         : TALISMAN
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : AMD Ryzen 5 7535U with Radeon Graphics
+# CPU Frequency      : 2293.117 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 31800 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 40390 MB
+# Available Virtual  : 33636 MB
+#-----------------------------------------------------------
+start_gui
+create_project aes . -part xc7a35ticpg236-1L
+file mkdir /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new
+close [ open /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_shiftrows.v w ]
+add_files /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_shiftrows.v
+close [ open /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_mixcolumns.v w ]
+add_files /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_mixcolumns.v
+close [ open /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_addroundkey.v w ]
+add_files /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_addroundkey.v
+close [ open /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_subbytes.v w ]
+add_files /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_subbytes.v
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+update_compile_order -fileset sources_1
+close [ open /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_sbox.v w ]
+add_files /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_sbox.v
+update_compile_order -fileset sources_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top aes_mixcolumns [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top aes_mixcolumns [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+close [ open /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_rcon.v w ]
+add_files /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_rcon.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top aes_rcon [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+close [ open /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_roundkey.v w ]
+add_files /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_roundkey.v
+update_compile_order -fileset sources_1
+close [ open /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_subword.v w ]
+add_files /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_subword.v
+close [ open /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_rotword.v w ]
+add_files /home/kamikazekobold/Desktop/zacha/aes/aes.srcs/sources_1/new/aes_rotword.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top aes_subword [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top aes_addroundkey [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top aes_roundkey [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+close_design
+close_project

@@ -2,7 +2,7 @@
 
 //A unique key generated from the original for each round of encryption.
 
-module aes_roundkey(
+module aes_keyexpansion(
     input wire [127:0] key,
     input wire clk,
     input wire enable,
@@ -37,7 +37,7 @@ module aes_roundkey(
         round <= 0;
     end
 
-    always @(posedge clk, posedge rst) begin
+    always @(posedge clk or posedge rst) begin
         if (rst) begin
             current <= key;
             previous <= key;
